@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
 
-function App() {
+import Button from 'components/Button';
+
+const Root = styled.div``;
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Root className="max-w-7xl mx-auto p-2">
+      <div>hello world</div>
+      <div>
+        <Button size="lg">click me!</Button>
+      </div>
+      <div>
+        <Button size="lg" disabled>
+          disabled
+        </Button>
+      </div>
+    </Root>
   );
-}
+};
 
 export default App;
