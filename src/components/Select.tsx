@@ -28,7 +28,6 @@ const Select: React.FC<Props> = ({
   closeOnSelect = false,
   ...props
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
   const [open, setOpen] = React.useState<boolean>(false);
   const [index, setIndex] = React.useState<number>(
     items.findIndex((item) => item.value === currentItem.value), // the index of highlighted item. (hover or keyboard event)
@@ -87,7 +86,7 @@ const Select: React.FC<Props> = ({
   }, [open, items, index, handleSelectItem]);
 
   return (
-    <div ref={containerRef} className={className} {...props}>
+    <div className={className} {...props}>
       {label !== undefined && (
         <label className="block text-sm font-medium text-gray-700">
           {label}

@@ -23,7 +23,6 @@ const Dropdown: React.FC<Props> = ({
   onSelect,
   ...props
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
   const [open, setOpen] = React.useState<boolean>(false);
 
   React.useEffect(() => {
@@ -46,7 +45,6 @@ const Dropdown: React.FC<Props> = ({
 
   return (
     <div
-      ref={containerRef}
       className={cn(className, 'relative inline-block text-left')}
       {...props}
     >
