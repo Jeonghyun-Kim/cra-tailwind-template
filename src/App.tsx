@@ -3,7 +3,7 @@ import React from 'react';
 import Toggle from 'components/Toggle';
 import Modal from 'components/Modal';
 
-const App: React.FC = () => {
+export default function App() {
   const [enabled, setEnabled] = React.useState<boolean>(false);
 
   return (
@@ -20,6 +20,4 @@ const App: React.FC = () => {
       />
     </>
   );
-};
-
-export default App;
+}
